@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Seite nicht gefunden | EQ Detailing</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/png" href="image/logo-tran.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-purple: #8b5cf6;
+            --dark-purple: #6d28d9;
+            --light-purple: #a78bfa;
+            --black: #0f0f0f;
+            --dark-gray: #1a1a1a;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 100%);
+            color: var(--white);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
+            top: -200px;
+            right: -200px;
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        body::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+            bottom: -150px;
+            left: -150px;
+            animation: pulse 5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+        }
+
+        .container-404 {
+            text-align: center;
+            max-width: 600px;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo-404 {
+            margin-bottom: 2rem;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .logo-404 img {
+            height: 120px;
+            width: auto;
+            filter: drop-shadow(0 10px 30px rgba(139, 92, 246, 0.3));
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--light-purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease 0.2s backwards;
+        }
+
+        .error-icon {
+            font-size: 5rem;
+            color: var(--primary-purple);
+            margin-bottom: 2rem;
+            animation: bounce 2s ease infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease 0.3s backwards;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            animation: fadeInUp 0.8s ease 0.4s backwards;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.5s backwards;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            min-height: 56px;
+        }
+
+        .btn-primary {
+            background: var(--primary-purple);
+            color: var(--white);
+            border: 2px solid var(--primary-purple);
+        }
+
+        .btn-primary:hover {
+            background: var(--dark-purple);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--primary-purple);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-purple);
+            transform: translateY(-3px);
+        }
+
+        .suggestions {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(139, 92, 246, 0.2);
+            animation: fadeInUp 0.8s ease 0.6s backwards;
+        }
+
+        .suggestions h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-purple);
+        }
+
+        .suggestions-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .suggestions-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .suggestions-links a:hover {
+            color: var(--primary-purple);
+            transform: translateX(5px);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 5rem;
+            }
+
+            .error-icon {
+                font-size: 3rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .logo-404 img {
+                height: 80px;
+            }
+
+            .btn-group {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-404">
+        <div class="logo-404">
+            <img src="image/logo-tran.png" alt="EQ Detailing Logo">
+        </div>
+        
+        <div class="error-icon">
+            <i class="fas fa-car-burst"></i>
+        </div>
+        
+        <div class="error-code">404</div>
+        
+        <h1>Seite nicht gefunden</h1>
+        
+        <p>Ups! Die gewünschte Seite konnte nicht gefunden werden. Möglicherweise wurde sie verschoben oder existiert nicht mehr.</p>
+        
+        <div class="btn-group">
+            <a href="index.html" class="btn btn-primary">
+                <i class="fas fa-home"></i>
+                Zur Startseite
+            </a>
+            <a href="index.html#kontakt" class="btn btn-secondary">
+                <i class="fas fa-envelope"></i>
+                Kontakt
+            </a>
+        </div>
+        
+        <div class="suggestions">
+            <h3>Beliebte Seiten:</h3>
+            <div class="suggestions-links">
+                <a href="index.html#pakete">
+                    <i class="fas fa-chevron-right"></i>
+                    Unsere Pakete
+                </a>
+                <a href="index.html#galerie">
+                    <i class="fas fa-chevron-right"></i>
+                    Galerie
+                </a>
+                <a href="index.html#ueber-uns">
+                    <i class="fas fa-chevron-right"></i>
+                    Über uns
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Auto-redirect after 10 seconds
+        let countdown = 10;
+        const redirectTimer = setInterval(() => {
+            countdown--;
+            if (countdown === 0) {
+                window.location.href = 'index.html';
+            }
+        }, 1000);
+
+        // Log 404 for analytics (if GA is active)
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'exception', {
+                'description': '404_page_not_found',
+                'fatal': false
+            });
+        }
+    </script>
+</body>
+</html>

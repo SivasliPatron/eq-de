@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>EQ Detailing - Mobile Fahrzeugaufbereitung & Autopflege | Premium Service</title>
     
-    <!-- Cookiebot -->
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="6b92beec-0bb5-46c3-b02e-92614a05bc41" data-blockingmode="auto" type="text/javascript"></script>
-    
     <!-- SEO Meta Tags -->
     <meta name="description" content="★★★★★ EQ Detailing - Ihre mobile Fahrzeugaufbereitung in Deutschland. Professionelle Innenraumreinigung, Geruchsbeseitigung & Keramikversiegelung. Jetzt 20% Rabatt sichern!">
     <meta name="keywords" content="Fahrzeugaufbereitung, Mobile Autopflege, Auto Detailing, Innenraumreinigung, Geruchsbeseitigung, Keramikversiegelung, Langzeitversiegelung, Polsterreinigung, Lederaufbereitung, Ozonbehandlung, Premium Autopflege, Auto waschen">
@@ -50,6 +47,106 @@
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.eq-detailing.de/">
+    
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "EQ Detailing",
+        "image": "https://www.eq-detailing.de/image/logo-tran.png",
+        "@id": "https://www.eq-detailing.de",
+        "url": "https://www.eq-detailing.de",
+        "telephone": "+49-XXX-XXXXXXX",
+        "priceRange": "€€",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Deutschland",
+            "addressCountry": "DE"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 0,
+            "longitude": 0
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                ],
+                "opens": "08:00",
+                "closes": "18:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "16:00"
+            }
+        ],
+        "sameAs": [
+            "https://www.instagram.com/eq.detailing0",
+            "https://www.tiktok.com/@eq.detailing"
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "50"
+        },
+        "description": "Professionelle mobile Fahrzeugaufbereitung mit Premium-Produkten. Innenraumreinigung, Keramikversiegelung, Geruchsbeseitigung und mehr.",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Fahrzeugaufbereitung Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Express Paket",
+                        "description": "Schnelle Innenraumreinigung für zwischendurch"
+                    },
+                    "price": "35",
+                    "priceCurrency": "EUR"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Silber Paket",
+                        "description": "Gründliche Innenraumreinigung mit Polsterreinigung"
+                    },
+                    "price": "89",
+                    "priceCurrency": "EUR"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Gold Paket",
+                        "description": "Premium Komplettreinigung mit Tiefenpflege"
+                    },
+                    "price": "149",
+                    "priceCurrency": "EUR"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Platin Paket",
+                        "description": "Luxus Komplettaufbereitung mit Keramikversiegelung"
+                    },
+                    "price": "239",
+                    "priceCurrency": "EUR"
+                }
+            ]
+        }
+    }
+    </script>
     
     <!-- Google Analytics 4 - Replace YOUR_GA4_ID with actual tracking ID -->
     <!-- Uncomment when ready to use -->
@@ -236,15 +333,6 @@
     </script>
 </head>
 <body>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="preloader-content">
-            <img src="image/logo-tran.png" alt="EQ Detailing" class="preloader-logo">
-            <div class="loader"></div>
-            <p>Wird geladen...</p>
-        </div>
-    </div>
-
     <header>
         <nav class="navbar">
             <div class="container">
@@ -256,11 +344,11 @@
                 <ul class="nav-links">
                     <li><a href="#home" class="active" aria-label="Zur Startseite navigieren">Home</a></li>
                     <li><a href="#ueber-uns" aria-label="Mehr über uns erfahren">Über uns</a></li>
-                    <li><a href="#pakete" aria-label="Unsere Pakete ansehen">Pakete</a></li>
+                    <li><a href="service-preise.html" aria-label="Service & Preise ansehen">Service & Preise</a></li>
                     <li><a href="#galerie" aria-label="Galerie anzeigen">Galerie</a></li>
                     <li><a href="#kontakt" aria-label="Kontaktformular öffnen">Kontakt</a></li>
                 </ul>
-                <a href="#kontakt" class="cta-btn" aria-label="Termin buchen">Termin buchen</a>
+                <a href="#termin-buchen" class="cta-btn" aria-label="Termin buchen">Termin buchen</a>
                 <button class="menu-toggle" aria-label="Menü öffnen" aria-expanded="false">
                     <span class="menu-icon">
                         <span class="menu-icon-line"></span>
@@ -300,7 +388,7 @@
                 </div>
             </div>
             <div class="hero-cta fade-in-delay-2">
-                <a href="#kontakt" class="btn-primary" aria-label="Jetzt Termin für Fahrzeugaufbereitung buchen">Jetzt Termin buchen</a>
+                <a href="#termin-buchen" class="btn-primary booking-btn" aria-label="Jetzt Termin für Fahrzeugaufbereitung buchen">Jetzt Termin buchen</a>
                 <a href="#pakete" class="btn-secondary" aria-label="Unsere Detailing-Pakete ansehen">Unsere Pakete</a>
             </div>
             <div class="promo-banner fade-in-delay-3" role="banner">
@@ -431,56 +519,52 @@
     <section id="pakete" class="packages">
         <div class="packages-bg-image"></div>
         <div class="container">
-            <h2 class="section-title">Unsere Pakete</h2>
-            <div class="packages-grid">
-                <div class="package-card fade-in-scroll">
-                    <div class="package-header komfort">
-                        <i class="fas fa-star"></i>
-                        <h3>Komfort Paket</h3>
-                        <p class="price">ab 60 €</p>
-                        <p class="price-note">je nach Fahrzeuggröße</p>
+            <h2 class="section-title">Unsere Service & Preise</h2>
+            <p style="text-align: center; color: var(--light-gray); font-size: 1.2rem; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Von Express-Reinigung bis Platin-Paket – wir haben für jeden Anspruch das passende Angebot. Entdecken Sie unsere transparenten Preise und umfassenden Leistungen.
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+                <!-- Quick Preview Cards -->
+                <div class="package-card fade-in-scroll" style="text-align: center; padding: 2.5rem;">
+                    <div style="width: 80px; height: 80px; margin: 0 auto 1.5rem; background: linear-gradient(135deg, var(--primary-purple), var(--light-purple)); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-bolt" style="font-size: 2rem; color: white;"></i>
                     </div>
-                    <ul class="package-features">
-                        <li><i class="fas fa-check"></i>Gründliche Innenraumreinigung</li>
-                        <li><i class="fas fa-check"></i>Saugen von Sitzen, Teppichen & Kofferraum</li>
-                        <li><i class="fas fa-check"></i>Reinigung von Armaturen & Cockpit</li>
-                        <li><i class="fas fa-check"></i>Scheibenreinigung innen</li>
-                    </ul>
-                    <a href="#kontakt" class="package-btn">Jetzt buchen</a>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--white);">Express Reinigung</h3>
+                    <p style="color: var(--light-gray); margin-bottom: 1rem;">ab 35€</p>
+                    <p style="color: var(--light-gray); font-size: 0.9rem;">Schnelle Grundreinigung innen & außen</p>
                 </div>
 
-                <div class="package-card featured fade-in-scroll-delay">
+                <div class="package-card featured fade-in-scroll-delay" style="text-align: center; padding: 2.5rem;">
                     <div class="popular-badge">Beliebt</div>
-                    <div class="package-header premium">
-                        <i class="fas fa-gem"></i>
-                        <h3>Premium Paket</h3>
-                        <p class="price">ab 85 €</p>
-                        <p class="price-note">je nach Fahrzeuggröße</p>
+                    <div style="width: 80px; height: 80px; margin: 0 auto 1.5rem; background: linear-gradient(135deg, var(--primary-purple), var(--light-purple)); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-crown" style="font-size: 2rem; color: white;"></i>
                     </div>
-                    <ul class="package-features">
-                        <li><i class="fas fa-check"></i>Alles aus dem Komfort Paket</li>
-                        <li><i class="fas fa-check"></i>Detailreinigung (Getränkehalter, Türfächer usw.)</li>
-                        <li><i class="fas fa-check"></i>Lederpflege (falls vorhanden)</li>
-                        <li><i class="fas fa-check"></i>Geruchsneutralisierung</li>
-                    </ul>
-                    <a href="#kontakt" class="package-btn">Jetzt buchen</a>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--white);">Gold Paket</h3>
+                    <p style="color: var(--light-gray); margin-bottom: 1rem;">ab 149€</p>
+                    <p style="color: var(--light-gray); font-size: 0.9rem;">Premium-Service mit Hochglanzpolitur</p>
                 </div>
 
-                <div class="package-card fade-in-scroll-delay-2">
-                    <div class="package-header luxus">
-                        <i class="fas fa-crown"></i>
-                        <h3>Luxus Paket</h3>
-                        <p class="price">ab 100 €</p>
-                        <p class="price-note">je nach Fahrzeuggröße</p>
+                <div class="package-card fade-in-scroll-delay-2" style="text-align: center; padding: 2.5rem;">
+                    <div style="width: 80px; height: 80px; margin: 0 auto 1.5rem; background: linear-gradient(135deg, var(--primary-purple), var(--light-purple)); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-gem" style="font-size: 2rem; color: white;"></i>
                     </div>
-                    <ul class="package-features">
-                        <li><i class="fas fa-check"></i>Alles aus dem Premium Paket</li>
-                        <li><i class="fas fa-check"></i>Ozonbehandlung (gegen starke Gerüche)</li>
-                        <li><i class="fas fa-check"></i>Langzeitschutz für Armaturen & Oberflächen</li>
-                        <li><i class="fas fa-check"></i>Optional: Außenwäsche nach Wunsch</li>
-                    </ul>
-                    <a href="#kontakt" class="package-btn">Jetzt buchen</a>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--white);">Platin Paket</h3>
+                    <p style="color: var(--light-gray); margin-bottom: 1rem;">ab 239€</p>
+                    <p style="color: var(--light-gray); font-size: 0.9rem;">Das ultimative Komplettpaket</p>
                 </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div style="text-align: center; padding: 3rem; background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(167, 139, 250, 0.05)); border-radius: 20px; border: 2px solid rgba(139, 92, 246, 0.3);">
+                <h3 style="font-size: 2rem; color: var(--white); margin-bottom: 1rem;">Alle Pakete & Extras im Detail</h3>
+                <p style="color: var(--light-gray); font-size: 1.1rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Entdecken Sie unsere vollständige Preisliste mit allen Leistungen, Extras wie Ozonbehandlung, Tierhaarentfernung und Nano-Versiegelung.
+                </p>
+                <a href="service-preise.html" class="package-btn" style="display: inline-block; padding: 1.2rem 3rem; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px;">
+                    <i class="fas fa-arrow-right" style="margin-right: 0.5rem;"></i>
+                    Zur vollständigen Preisliste
+                </a>
             </div>
         </div>
     </section>
@@ -536,91 +620,53 @@
         </div>
     </div>
 
-    <section id="bewertungen" class="testimonials" data-nav="galerie">
+    <!-- Online Booking Section -->
+    <section id="termin-buchen" class="booking-section">
         <div class="container">
-            <h2 class="section-title">Das sagen unsere Kunden</h2>
-            <div class="testimonials-slider">
-                <div class="testimonials-wrapper">
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+            <h2 class="section-title">Online Termin buchen</h2>
+            <p style="text-align: center; color: #9ca3af; margin-bottom: 3rem; font-size: 1.1rem;">Wählen Sie Ihr gewünschtes Paket und buchen Sie direkt Ihren Wunschtermin</p>
+            
+            <div class="booking-container">
+                <!-- Option 1: Calendly Integration (Platzhalter) -->
+                <div class="booking-embed">
+                    <div class="booking-placeholder">
+                        <i class="fas fa-calendar-check" style="font-size: 4rem; color: #8b5cf6; margin-bottom: 1rem;"></i>
+                        <h3 style="color: #ffffff; margin-bottom: 1rem;">Buchungssystem Integration</h3>
+                        <p style="color: #9ca3af; margin-bottom: 2rem;">Hier wird Ihr Calendly, SimplyBook.me oder anderes Buchungssystem eingebunden.</p>
+                        
+                        <!-- Beispiel Calendly Code (ersetzen mit echtem Link): -->
+                        <!-- <div class="calendly-inline-widget" data-url="https://calendly.com/IHR-USERNAME" style="min-width:320px;height:700px;"></div> -->
+                        <!-- <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
+                        
+                        <!-- Alternativ: Direkt-Links zu den Paketen -->
+                        <div class="booking-buttons">
+                            <a href="#kontakt" class="booking-pkg-btn">
+                                <i class="fas fa-bolt"></i>
+                                <span>Express Paket buchen</span>
+                                <small>35€</small>
+                            </a>
+                            <a href="#kontakt" class="booking-pkg-btn">
+                                <i class="fas fa-gem"></i>
+                                <span>Silber Paket buchen</span>
+                                <small>89€</small>
+                            </a>
+                            <a href="#kontakt" class="booking-pkg-btn popular">
+                                <i class="fas fa-crown"></i>
+                                <span>Gold Paket buchen</span>
+                                <small>149€</small>
+                            </a>
+                            <a href="#kontakt" class="booking-pkg-btn">
+                                <i class="fas fa-star"></i>
+                                <span>Platin Paket buchen</span>
+                                <small>239€</small>
+                            </a>
                         </div>
-                        <p class="testimonial-text">"Absolut professionelle Arbeit! Mein Auto sieht aus wie neu. Die Innenraumreinigung war perfekt und der Service war super freundlich. Kann ich nur weiterempfehlen!"</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div class="author-info">
-                                <h4>Michael S.</h4>
-                                <p>BMW 5er</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"Das Premium Paket hat sich absolut gelohnt! Die Geruchsbeseitigung war fantastisch und mein Leder glänzt wieder wie am ersten Tag. Top Service!"</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div class="author-info">
-                                <h4>Sarah M.</h4>
-                                <p>Mercedes C-Klasse</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"Sehr zufrieden mit dem Luxus Paket! Die Ozonbehandlung hat alle Gerüche entfernt. Der mobile Service ist super praktisch. Gerne wieder!"</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div class="author-info">
-                                <h4>Thomas K.</h4>
-                                <p>Audi A6</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"Einfach perfekt! Sehr detaillierte Arbeit, faire Preise und pünktlicher Service. Das Auto sieht besser aus als nach der letzten Inspektion beim Händler."</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div class="author-info">
-                                <h4>Julia R.</h4>
-                                <p>VW Golf</p>
-                            </div>
+                        
+                        <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(139, 92, 246, 0.1); border-radius: 12px; border-left: 4px solid #8b5cf6;">
+                            <p style="color: #a78bfa; margin: 0;"><strong>📞 Telefonische Buchung:</strong> Rufen Sie uns an unter <a href="tel:+4915206427550" style="color: #8b5cf6;">+49 1520 6427550</a></p>
                         </div>
                     </div>
                 </div>
-                <button class="testimonial-btn prev" aria-label="Vorherige Bewertung"><i class="fas fa-chevron-left"></i></button>
-                <button class="testimonial-btn next" aria-label="Nächste Bewertung"><i class="fas fa-chevron-right"></i></button>
-                <div class="testimonial-dots"></div>
             </div>
         </div>
     </section>
@@ -653,27 +699,28 @@
                 </div>
                 <div class="contact-form-wrapper fade-in-scroll-delay">
                     <form id="contactForm" class="contact-form" action="https://formsubmit.co/info@eq-detailing.de" method="POST">
-                        <!-- FormSubmit Configuration -->
-                        <input type="hidden" name="_subject" value="Neue Buchungsanfrage von EQ Detailing Website">
+                        <!-- FormSubmit Konfiguration -->
+                        <input type="hidden" name="_subject" value="🚗 Neue Buchungsanfrage von EQ Detailing">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
                         <input type="hidden" name="_next" value="https://www.eq-detailing.de/#kontakt?success=true">
+                        <input type="hidden" name="_autoresponse" value="Vielen Dank für Ihre Anfrage! Wir melden uns schnellstmöglich bei Ihnen. 🎁 Vergessen Sie nicht: 20% Rabatt auf Ihren ersten Service! Bei Fragen: +49 1520 6427550">
                         
                         <input type="text" name="name" placeholder="Ihr Name" required aria-required="true" aria-label="Ihr Name">
                         <input type="email" name="email" placeholder="Ihre E-Mail" required aria-required="true" aria-label="Ihre E-Mail-Adresse">
                         <input type="tel" name="phone" placeholder="Ihre Telefonnummer" required aria-required="true" aria-label="Ihre Telefonnummer">
                         <select name="package" required aria-required="true" aria-label="Paket auswählen">
                             <option value="">Paket auswählen</option>
-                            <option value="komfort">Komfort Paket (ab 60 €)</option>
-                            <option value="premium">Premium Paket (ab 85 €)</option>
-                            <option value="luxus">Luxus Paket (ab 100 €)</option>
+                            <option value="Komfort Paket (ab 60 €)">Komfort Paket (ab 60 €)</option>
+                            <option value="Premium Paket (ab 85 €)">Premium Paket (ab 85 €)</option>
+                            <option value="Luxus Paket (ab 100 €)">Luxus Paket (ab 100 €)</option>
                         </select>
                         <textarea name="message" placeholder="Ihre Nachricht / Wunschtermin" rows="4" required aria-required="true" aria-label="Ihre Nachricht"></textarea>
                         <div class="privacy-checkbox">
-                            <input type="checkbox" id="privacy" name="privacy" required aria-required="true">
+                            <input type="checkbox" id="privacy" name="_privacy" required aria-required="true">
                             <label for="privacy">Ich habe die <a href="datenschutz.html" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a> gelesen und akzeptiere diese.</label>
                         </div>
-                        <div class="form-error" role="alert" aria-live="polite"></div>
+                        <div id="formMessage" class="form-message" role="alert" aria-live="polite"></div>
                         <button type="submit" class="submit-btn">Anfrage senden</button>
                     </form>
                 </div>
@@ -696,11 +743,11 @@
                     <img src="image/logo-tran.png" alt="EQ Detailing" loading="lazy">
                     <p>Professionelle Fahrzeugaufbereitung</p>
                     <div class="footer-social">
-                        <a href="https://instagram.com/eq.detailing" target="_blank" rel="noopener noreferrer" aria-label="Folgen Sie uns auf Instagram">
+                        <a href="https://www.instagram.com/eq.detailing0" target="_blank" rel="noopener noreferrer" aria-label="Folgen Sie uns auf Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://facebook.com/eqdetailing" target="_blank" rel="noopener noreferrer" aria-label="Besuchen Sie uns auf Facebook">
-                            <i class="fab fa-facebook"></i>
+                        <a href="https://www.tiktok.com/@eq.detailing" target="_blank" rel="noopener noreferrer" aria-label="Folgen Sie uns auf TikTok">
+                            <i class="fab fa-tiktok"></i>
                         </a>
                         <a href="https://wa.me/4915206427550" target="_blank" rel="noopener noreferrer" aria-label="Kontaktieren Sie uns via WhatsApp">
                             <i class="fab fa-whatsapp"></i>
@@ -714,7 +761,7 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#pakete">Pakete</a></li>
+                        <li><a href="service-preise.html">Service & Preise</a></li>
                         <li><a href="#galerie">Galerie</a></li>
                         <li><a href="#kontakt">Kontakt</a></li>
                     </ul>
@@ -730,6 +777,7 @@
                 <div class="footer-legal-links">
                     <a href="impressum.html" class="legal-link">Impressum</a>
                     <a href="datenschutz.html" class="legal-link">Datenschutz</a>
+                    <a href="sitemap.xml" class="legal-link" target="_blank">Sitemap</a>
                 </div>
             </div>
         </div>

@@ -102,10 +102,11 @@ document.querySelectorAll('section').forEach(section => {
 });
 
 // Contact Form with Validation
+// Kontaktformular mit Validierung (FormSubmit)
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
-    const formError = contactForm.querySelector('.form-error');
+    const formMessage = document.getElementById('formMessage');
     
     // Real-time validation
     const inputs = contactForm.querySelectorAll('input[required], select[required], textarea[required]');
@@ -158,9 +159,8 @@ if (contactForm) {
         return isValid;
     }
     
+    // Formular vor dem Absenden validieren
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
         let formIsValid = true;
         
         // Validate all fields
@@ -171,53 +171,60 @@ if (contactForm) {
         });
         
         if (!formIsValid) {
-            if (formError) {
-                formError.textContent = 'Bitte füllen Sie alle Felder korrekt aus.';
-                formError.classList.add('show');
-                
-                // Scroll to first error
-                const firstError = contactForm.querySelector('.error');
-                if (firstError) {
-                    firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
+            e.preventDefault();
+            
+            if (formMessage) {
+                formMessage.textContent = 'Bitte füllen Sie alle Felder korrekt aus.';
+                formMessage.className = 'form-message error';
+                formMessage.style.display = 'block';
             }
-            return;
-        }
-        
-        // Hide error message
-        if (formError) {
-            formError.classList.remove('show');
+            
+            // Scroll to first error
+            const firstError = contactForm.querySelector('.error');
+            if (firstError) {
+                firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            return false;
         }
         
         // Show loading state
         const submitBtn = contactForm.querySelector('.submit-btn');
-        submitBtn.textContent = 'Wird gesendet...';
-        submitBtn.disabled = true;
+        if (submitBtn) {
+            submitBtn.textContent = 'Wird gesendet...';
+            submitBtn.disabled = true;
+        }
         
-        // Submit form via FormSubmit
-        contactForm.submit();
+        // Form wird jetzt via FormSubmit gesendet
+        return true;
     });
 }
 
-// Check for success parameter in URL (after FormSubmit redirect)
+// Erfolgs-Nachricht nach FormSubmit-Redirect anzeigen
 window.addEventListener('load', () => {
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('success') === 'true') {
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            const formError = contactForm.querySelector('.form-error');
-            if (formError) {
-                formError.style.color = '#51cf66';
-                formError.style.borderColor = '#51cf66';
-                formError.style.background = 'rgba(81, 207, 102, 0.1)';
-                formError.textContent = '✓ Vielen Dank! Ihre Anfrage wurde erfolgreich gesendet. Wir melden uns in Kürze bei Ihnen.';
-                formError.classList.add('show');
-                
-                // Scroll to contact section
-                document.getElementById('kontakt').scrollIntoView({ behavior: 'smooth' });
-                
-                // Remove success parameter from URL
-                window.history.replaceState({}, document.title, window.location.pathname);
+        const formMessage = document.getElementById('formMessage');
+        const contactSection = document.getElementById('kontakt');
+        
+        if (formMessage && contactSection) {
+            formMessage.innerHTML = '<strong>✅ Vielen Dank!</strong> Ihre Anfrage wurde erfolgreich gesendet. Wir melden uns schnellstmöglich bei Ihnen.<br><small>🎁 Vergessen Sie nicht: 20% Rabatt auf Ihren ersten Service!</small>';
+            formMessage.className = 'form-message success';
+            formMessage.style.display = 'block';
+            
+            // Scroll zur Nachricht
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+            
+            // URL bereinigen (ohne Reload)
+            window.history.replaceState({}, document.title, window.location.pathname);
+            
+            // Formular zurücksetzen
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.reset();
+                const inputs = form.querySelectorAll('input, select, textarea');
+                inputs.forEach(input => {
+                    input.classList.remove('success', 'error');
+                });
             }
         }
     }

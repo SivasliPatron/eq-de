@@ -204,32 +204,62 @@ html, body {
     }
 }
 
-/* Form Error Message */
-.form-error {
-    color: #ff6b6b;
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-    display: none;
-    padding: 0.8rem;
-    background: rgba(255, 107, 107, 0.1);
+/* Form Message Styles */
+.form-message {
+    font-size: 0.95rem;
+    margin: 1rem 0;
+    padding: 1rem 1.2rem;
     border-radius: 8px;
-    border-left: 3px solid #ff6b6b;
+    border-left: 4px solid;
+    display: none;
+    animation: slideIn 0.3s ease;
 }
 
-.form-error.show {
-    display: block;
+.form-message.error {
+    color: #c92a2a;
+    background: rgba(255, 107, 107, 0.1);
+    border-color: #ff6b6b;
+}
+
+.form-message.success {
+    color: #2b8a3e;
+    background: rgba(81, 207, 102, 0.1);
+    border-color: #51cf66;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .contact-form input.error,
 .contact-form select.error,
 .contact-form textarea.error {
     border-color: #ff6b6b;
+    background: rgba(255, 107, 107, 0.05);
 }
 
 .contact-form input.success,
 .contact-form select.success,
 .contact-form textarea.success {
     border-color: #51cf66;
+    background: rgba(81, 207, 102, 0.05);
+}
+
+/* Button Loading State */
+.submit-btn .btn-loading {
+    display: none;
+}
+
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
 }
 
 .container {
@@ -2306,6 +2336,103 @@ footer {
     .submit-btn {
         font-size: 1.05rem;
         padding: 1.1rem 2rem;
+    }
+
+    /* Booking Section */
+    .booking-section {
+        padding: 100px 2rem;
+        background: #0f0f0f;
+        position: relative;
+    }
+
+    .booking-container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .booking-embed {
+        background: #1a1a1a;
+        border-radius: 24px;
+        padding: 3rem;
+        border: 1px solid rgba(139, 92, 246, 0.2);
+    }
+
+    .booking-placeholder {
+        text-align: center;
+    }
+
+    .booking-buttons {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .booking-pkg-btn {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+        border: 2px solid rgba(139, 92, 246, 0.3);
+        border-radius: 16px;
+        padding: 1.5rem 1rem;
+        text-decoration: none;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .booking-pkg-btn i {
+        font-size: 2rem;
+        color: #8b5cf6;
+    }
+
+    .booking-pkg-btn span {
+        font-weight: 600;
+        font-size: 1.05rem;
+    }
+
+    .booking-pkg-btn small {
+        color: #a78bfa;
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+
+    .booking-pkg-btn:hover {
+        transform: translateY(-5px);
+        border-color: #8b5cf6;
+        box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+    }
+
+    .booking-pkg-btn.popular {
+        border-color: #8b5cf6;
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(139, 92, 246, 0.05) 100%);
+    }
+
+    .booking-pkg-btn.popular::before {
+        content: 'BELIEBT';
+        position: absolute;
+        top: 10px;
+        right: -30px;
+        background: #8b5cf6;
+        color: white;
+        padding: 4px 40px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        transform: rotate(45deg);
+        box-shadow: 0 3px 10px rgba(139, 92, 246, 0.4);
+    }
+
+    @media (max-width: 768px) {
+        .booking-embed {
+            padding: 2rem 1.5rem;
+        }
+
+        .booking-buttons {
+            grid-template-columns: 1fr;
+        }
     }
 
     /* Footer */
